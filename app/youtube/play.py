@@ -46,3 +46,30 @@ def create_youtube_url(command):
       r"play\s+(.+)",
       r"youtube\s+(.+)",
   ]
+
+  query = command
+
+  for pattern in patterns:
+
+    match = re.search(
+      pattern,
+      text
+    )
+
+    if match:
+
+      query = match.group(1)
+      break
+
+query = query.strip()
+
+video_id = get_vid(query)
+
+if not video_id:
+  retuern None
+
+return(
+  "https://www.youtube.com/embed/"
+  + video_id
+  + "?autoplay=1&mute=0"
+)
