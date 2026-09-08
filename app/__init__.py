@@ -7,7 +7,7 @@ def home():
 
 def  create_app():
   app = Flask(_name_)
-app.register_blueprint(youtube_bp, url_prefix="/youtube")
+  app.register_blueprint(youtube_bp, url_prefix="/youtube")
 
 @app.route("/html")
 def html():
