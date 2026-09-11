@@ -1,3 +1,6 @@
+### Directory Structure
+
+```text
 app/
 ├── gmail/
 ├── youtube/
